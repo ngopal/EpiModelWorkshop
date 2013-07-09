@@ -1,0 +1,10 @@
+lab.ego.net <- network.initialize(1000, directed = F)
+summary(lab.ego.net)
+lab.ego.deg <- c(60, 140, 450, 350)
+sum(lab.ego.deg)
+lab.ego.edges <- sum(0*350+1*450+2*140+3*60)/2
+lab.ego.fit <- ergm(lab.ego.net ~ edges, target.stats = lab.ego.edges)
+summary(lab.ego.fit)
+lab.ego.sim1 <- simulate(lab.ego.fit)
+plot(lab.ego.sim1, vertex.cex = 0.65)
+summary(lab.ego.sim1)
