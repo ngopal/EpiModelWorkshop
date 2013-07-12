@@ -112,7 +112,7 @@ nw <- network.initialize(num.m1 + num.m2, bipartite = num.m1, directed = F)
 # Assuming no same-sex partnerships in this model for simplicity
 
 deg.dist.m1 <- c(0.223, 0.732, 0.045, 0.001)
-deg.dist.m2 <- c(0.798, 0.79, 0.018, 0.001)
+deg.dist.m2 <- c(0.798, 0.179, 0.018, 0.001) #typo? changed 0.079 to 0.179
 bip.degdist.check(num.m1, num.m2, deg.dist.m1, deg.dist.m2)
 
 formation <- ~edges + b1degree(0:1) + b2degree(0:1)
